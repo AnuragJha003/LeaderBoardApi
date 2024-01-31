@@ -282,7 +282,9 @@ const leaderboardData = {
     // Check the 'show' attribute
     if (leaderboardData.show === 'true') {
       // Display the leaderboard data if 'show' is 'true'
-      res.json(leaderboardData);
+      const top10 = leaderboardData.teams.slice(0, 10);
+      res.json({ teams: top10 });
+      //res.json(leaderboardData);
     } else {
       // Send a custom response if 'show' is 'false'
       res.json({ message: 'Leaderboard data is not available.' });
@@ -300,6 +302,9 @@ const leaderboardData = {
       res.json({ message: 'Leaderboard data is not available.' });
     }
   });
+  app.get('/',(req,res)=>{
+    res.json({ message: 'Enjoy kr shaadi Gg' });
+  })
   
   app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
