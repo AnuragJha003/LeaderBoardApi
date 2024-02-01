@@ -280,7 +280,7 @@ const leaderboardData = {
   // Route to get all leaderboard data
   app.get('/leaderboard/pre', (req, res) => {
     // Check the 'show' attribute
-    if (leaderboardData.show === 'true') {
+    /*if (leaderboardData.show === 'true') {
       // Display the leaderboard data if 'show' is 'true'
       const top10 = leaderboardData.teams.slice(0, 10);
       res.json({ teams: top10 });
@@ -288,19 +288,26 @@ const leaderboardData = {
     } else {
       // Send a custom response if 'show' is 'false'
       res.json({ message: 'Leaderboard data is not available.' });
-    }
+    }*/
+    res.json(leaderboardData);
   });
   //Routes to get the top3 team 
   app.get('/leaderboard/final', (req, res) => {
     // Check the 'show' attribute
-    if (leaderboardData.show === 'true') {
+    /*if (leaderboardData.show === 'true') {
       // Send the top 3 teams if 'show' is 'true'
       const top3 = leaderboardData.teams.slice(0, 3);
       res.json({ teams: top3 });
     } else {
       // Send a custom response if 'show' is 'false'
       res.json({ message: 'Leaderboard data is not available.' });
+    }*/
+    const top3=leaderboardData.teams.slice(0,3);
+    const result={
+        "show":leaderboardData.show,
+        "teams":top3
     }
+    res.json(result);
   });
   app.get('/',(req,res)=>{
     res.json({ message: 'Enjoy kr shaadi Gg' });
