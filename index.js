@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 app.set("trust proxy", 1);
 
 const leaderboardData = {
-    "show": "true",
+    "show": "false",
     "teams": [
       {
         "rank": 1,
