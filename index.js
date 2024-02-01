@@ -1,6 +1,17 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const cors = require("cors");
+
+
+const corsOptions = {
+  origin: ["http://localhost:3000", "https://gdsc-ju.web.app/"],
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+app.set("trust proxy", 1);
 
 const leaderboardData = {
     "show": "true",
@@ -312,7 +323,12 @@ const leaderboardData = {
   app.get('/',(req,res)=>{
     res.json({ message: 'Enjoy kr shaadi Gg' });
   })
-  
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+
+  //app.listen(PORT, "0.0.0.0", (err) => {console.log(err)};
+  app.listen(PORT, "0.0.0.0", (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Server is running on http://localhost:${PORT}`);
+    }
   });
