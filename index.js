@@ -5,7 +5,7 @@ const cors = require("cors");
 
 
 const corsOptions = {
-  origin: "*",
+  origin: ["http://localhost:3000", "https://gdsc-ju.web.app/"],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -14,10 +14,118 @@ app.use(cors(corsOptions));
 app.set("trust proxy", 1);
 
 const leaderboardData = {
-    "show": "false",
+    "show": "true",
     "teams": [
       {
         "rank": 1,
+        "name": "TLE",
+        "links": {
+          "github": "https://github.com/VivekHalder/BIT-N-BUILD",
+          "youtube": ""
+        },
+        "members": [
+          {
+            "username": "@satwikcoder007",
+            "github": "https://github.com/satwikcoder007"
+          },
+          {
+            "username": "@VivekHalder",
+            "github": "https://github.com/VivekHalder"
+          },
+          {
+            "username": "@Dipu010",
+            "github": "https://github.com/Dipu010"
+          },
+          {
+            "username": "@Brahmajit-Ray",
+            "github": "https://github.com/Brahmajit-Ray"
+          }
+        ],
+        "score": 94.00
+      },
+      {
+        "rank": 2,
+        "name": "Dino ",
+        "links": {
+          "github": "https://github.com/0xDebabrata/accessify",
+          "youtube": ""
+        },
+        "members": [
+          {
+            "username": "@0xDebabrata",
+            "github": "https://github.com/0xDebabrata"
+          },
+          {
+            "username": "@AdityaMayukhSom",
+            "github": "https://github.com/AdityaMayukhSom"
+          },
+          {
+            "username": "@Thezone-1",
+            "github": "https://github.com/Thezone-1"
+          },
+          {
+            "username": "@Soham-Dutta2023",
+            "github": "https://github.com/Soham-Dutta2023"
+          }
+        ],
+        "score": 91.75
+      },
+      {
+        "rank": 3,
+        "name": "sysmic",
+        "links": {
+          "github": "https://github.com/frostedkitsune/planner",
+          "youtube": ""
+        },
+        "members": [
+          {
+            "username": "@frostedkitsune",
+            "github": "https://github.com/frostedkitsune"
+          },
+          {
+            "username": "@etErn-A12l",
+            "github": "https://github.com/etErn-A12l"
+          },
+          {
+            "username": "@Ss3347C",
+            "github": "https://github.com/Ss3347C"
+          },
+          {
+            "username": "@rivvvvvv",
+            "github": "https://github.com/rivvvvvv"
+          }
+        ],
+        "score": 91
+      },
+      {
+        "rank": 4,
+        "name": "4. Sync Squad",
+        "links": {
+          "github": "https://github.com/PriyangshuJS/SnapVerify",
+          "youtube": ""
+        },
+        "members": [
+          {
+            "username": "@aishikmaitra",
+            "github": "https://github.com/aishikmaitra"
+          },
+          {
+            "username": "@Darth-Hannibal",
+            "github": "https://github.com/Darth-Hannibal"
+          },
+          {
+            "username": "@Borazonic",
+            "github": "https://github.com/Borazonic"
+          },
+          {
+            "username": "@PriyangshuJS",
+            "github": "https://github.com/PriyangshuJS"
+          }
+        ],
+        "score": 90.50
+      },
+      {
+        "rank": 5,
         "name": "Square",
         "links": {
           "github": "https://github.com/NayakPenguin/Vision-Bridge",
@@ -25,266 +133,150 @@ const leaderboardData = {
         },
         "members": [
           {
+            "username": "@AnuragJha003",
+            "github": "https://github.com/AnuragJha003"
+          },
+          {
             "username": "@NayakPenguin",
             "github": "https://github.com/NayakPenguin"
           },
           {
-            "username": "@OmMittal7",
-            "github": "https://github.com/OmMittal7"
+            "username": "@Om-Mittal",
+            "github": "https://github.com/Om-Mittal"
           },
           {
-            "username": "@AnuragJha2003",
-            "github": "https://github.com/AnuragJha2003"
-          },
-          {
-            "username": "@PriyamSass",
-            "github": "https://github.com/PriyamSass"
+            "username": "@priyam-03",
+            "github": "https://github.com/priyam-03"
           }
         ],
-        "score": 85.00
-      },
-      {
-        "rank": 2,
-        "name": "Team Beta",
-        "links": {
-          "github": "https://github.com/team-beta",
-          "youtube": "https://www.youtube.com/team-beta"
-        },
-        "members": [
-          {
-            "username": "@BetaUser1",
-            "github": "https://github.com/BetaUser1"
-          },
-          {
-            "username": "@BetaUser2",
-            "github": "https://github.com/BetaUser2"
-          },
-          {
-            "username": "@BetaUser3",
-            "github": "https://github.com/BetaUser3"
-          },
-          {
-            "username": "@BetaUser4",
-            "github": "https://github.com/BetaUser4"
-          }
-        ],
-        "score": 88.75
-      },
-      {
-        "rank": 3,
-        "name": "Team Gamma",
-        "links": {
-          "github": "https://github.com/team-gamma",
-          "youtube": "https://www.youtube.com/team-gamma"
-        },
-        "members": [
-          {
-            "username": "@GammaUser1",
-            "github": "https://github.com/GammaUser1"
-          },
-          {
-            "username": "@GammaUser2",
-            "github": "https://github.com/GammaUser2"
-          },
-          {
-            "username": "@GammaUser3",
-            "github": "https://github.com/GammaUser3"
-          },
-          {
-            "username": "@GammaUser4",
-            "github": "https://github.com/GammaUser4"
-          }
-        ],
-        "score": 85.25
-      },
-      {
-        "rank": 4,
-        "name": "Team Delta",
-        "links": {
-          "github": "https://github.com/team-delta",
-          "youtube": "https://www.youtube.com/team-delta"
-        },
-        "members": [
-          {
-            "username": "@DeltaUser1",
-            "github": "https://github.com/DeltaUser1"
-          },
-          {
-            "username": "@DeltaUser2",
-            "github": "https://github.com/DeltaUser2"
-          },
-          {
-            "username": "@DeltaUser3",
-            "github": "https://github.com/DeltaUser3"
-          },
-          {
-            "username": "@DeltaUser4",
-            "github": "https://github.com/DeltaUser4"
-          }
-        ],
-        "score": 82.00
-      },
-      {
-        "rank": 5,
-        "name": "Team Epsilon",
-        "links": {
-          "github": "https://github.com/team-epsilon",
-          "youtube": "https://www.youtube.com/team-epsilon"
-        },
-        "members": [
-          {
-            "username": "@EpsilonUser1",
-            "github": "https://github.com/EpsilonUser1"
-          },
-          {
-            "username": "@EpsilonUser2",
-            "github": "https://github.com/EpsilonUser2"
-          },
-          {
-            "username": "@EpsilonUser3",
-            "github": "https://github.com/EpsilonUser3"
-          },
-          {
-            "username": "@EpsilonUser4",
-            "github": "https://github.com/EpsilonUser4"
-          }
-        ],
-        "score": 78.50
+        "score": 90
       },
       {
         "rank": 6,
-        "name": "Team Beta",
+        "name": "AsyncAwait ",
         "links": {
-          "github": "https://github.com/team-beta",
-          "youtube": "https://www.youtube.com/team-beta"
+          "github": "https://github.com/Amitabha37377/NeoChat",
+          "youtube": "https://youtu.be/pKJNcuAV9T0"
         },
         "members": [
           {
-            "username": "@BetaUser1",
-            "github": "https://github.com/BetaUser1"
+            "username": "@beradeep",
+            "github": "https://github.com/beradeep"
           },
           {
-            "username": "@BetaUser2",
-            "github": "https://github.com/BetaUser2"
+            "username": "@niladrix719",
+            "github": "https://github.com/niladrix719"
           },
           {
-            "username": "@BetaUser3",
-            "github": "https://github.com/BetaUser3"
+            "username": "@ani1609",
+            "github": "https://github.com/ani1609"
           },
           {
-            "username": "@BetaUser4",
-            "github": "https://github.com/BetaUser4"
+            "username": "@SwastikSarkar001",
+            "github": "https://github.com/SwastikSarkar001"
           }
         ],
-        "score": 88.75
+        "score": 87
       },
       {
         "rank": 7,
-        "name": "Team Gamma",
+        "name": "CodeSphere Symposium",
         "links": {
-          "github": "https://github.com/team-gamma",
-          "youtube": "https://www.youtube.com/team-gamma"
+          "github": "https://github.com/punyeeet/BitnBuild",
+          "youtube": ""
         },
         "members": [
           {
-            "username": "@GammaUser1",
-            "github": "https://github.com/GammaUser1"
+            "username": "@Soham-bakshi",
+            "github": "https://github.com/Soham-bakshi"
           },
           {
-            "username": "@GammaUser2",
-            "github": "https://github.com/GammaUser2"
+            "username": "@punyeeet",
+            "github": "https://github.com/punyeeet"
           },
           {
-            "username": "@GammaUser3",
-            "github": "https://github.com/GammaUser3"
+            "username": "@403-found",
+            "github": "https://github.com/403-found"
           },
           {
-            "username": "@GammaUser4",
-            "github": "https://github.com/GammaUser4"
+            "username": "@susmit3003",
+            "github": "https://github.com/susmit3003"
           }
         ],
-        "score": 85.25
+        "score": 85.50
       },
       {
         "rank": 8,
-        "name": "Team Delta",
+        "name": "East_India_Coding_Company",
         "links": {
-          "github": "https://github.com/team-delta",
-          "youtube": "https://www.youtube.com/team-delta"
+          "github": "https://github.com/hatif03/blue-green",
+          "youtube": ""
         },
         "members": [
           {
-            "username": "@DeltaUser1",
-            "github": "https://github.com/DeltaUser1"
+            "username": "@hatif03",
+            "github": "https://github.com/hatif03"
           },
           {
-            "username": "@DeltaUser2",
-            "github": "https://github.com/DeltaUser2"
-          },
-          {
-            "username": "@DeltaUser3",
-            "github": "https://github.com/DeltaUser3"
-          },
-          {
-            "username": "@DeltaUser4",
-            "github": "https://github.com/DeltaUser4"
+            "username": "@AzimWarsii",
+            "github": "https://github.com/AzimWarsii"
           }
         ],
         "score": 82.00
       },
       {
         "rank": 9,
-        "name": "Team Epsilon",
+        "name": "TechInnovators1 ",
         "links": {
-          "github": "https://github.com/team-epsilon",
-          "youtube": "https://www.youtube.com/team-epsilon"
+          "github": "https://github.com/Sourav1232/ReguComply",
+          "youtube": ""
         },
         "members": [
           {
-            "username": "@EpsilonUser1",
-            "github": "https://github.com/EpsilonUser1"
+            "username": "@Sourav1232",
+            "github": "https://github.com/Sourav1232"
           },
           {
-            "username": "@EpsilonUser2",
-            "github": "https://github.com/EpsilonUser2"
+            "username": "@ShivamKumarSah",
+            "github": "https://github.com/ShivamKumarSah"
           },
           {
-            "username": "@EpsilonUser3",
-            "github": "https://github.com/EpsilonUser3"
+            "username": "@amankumar207",
+            "github": "https://github.com/amankumar207"
           },
           {
-            "username": "@EpsilonUser4",
-            "github": "https://github.com/EpsilonUser4"
+            "username": "@abhishek-kanti",
+            "github": "https://github.com/abhishek-kanti"
           }
         ],
         "score": 78.50
       },
       {
         "rank": 10,
-        "name": "Team Beta",
+        "name": "Team Zero",
         "links": {
-          "github": "https://github.com/team-beta",
-          "youtube": "https://www.youtube.com/team-beta"
+          "github": "https://github.com/TeamDecode/TeamZero_gdsc_submission",
+          "youtube": ""
         },
         "members": [
           {
-            "username": "@BetaUser1",
-            "github": "https://github.com/BetaUser1"
+            "username": "@devkoustavdas",
+            "github": "https://github.com/devkoustavdas"
           },
           {
-            "username": "@BetaUser2",
-            "github": "https://github.com/BetaUser2"
+            "username": "@debduttanaskar",
+            "github": "https://github.com/debduttanaskar"
           },
           {
-            "username": "@BetaUser3",
-            "github": "https://github.com/BetaUser3"
+            "username": "@Amitabha37377",
+            "github": "https://github.com/Amitabha37377"
           },
           {
-            "username": "@BetaUser4",
-            "github": "https://github.com/BetaUser4"
+            "username": "@naby001",
+            "github": "https://github.com/naby001"
           }
         ],
-        "score": 88.75
+        "score": 75
       },
     ]
   };
