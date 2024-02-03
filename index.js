@@ -155,7 +155,7 @@ const leaderboardData = {
         "rank": 6,
         "name": "AsyncAwait ",
         "links": {
-          "github": "https://github.com/Amitabha37377/NeoChat",
+          "github": "https://github.com/ani1609/NeoChat",
           "youtube": "https://youtu.be/pKJNcuAV9T0"
         },
         "members": [
